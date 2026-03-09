@@ -1,0 +1,321 @@
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/*  Apply a natural box layout model to all elements  */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+} // end all elements
+
+/* --------------------------- BODY --------------------------- */
+body {
+  font-family: $defaultFont;
+  font-weight: $lightWeight;
+  min-width: 320px;
+}
+
+/* --------------------------- HEADER --------------------------- */
+
+header {
+  display: grid;
+  grid-template-columns: 50px auto;
+  column-gap: $gutter;
+  align-items: center; //vertically
+  padding: 0.5rem $gutter;
+  span {
+    margin-left: 0.5rem;
+    font-size: 1.6rem;
+    font-weight: $lightWeight;
+    color: $primaryColor;
+  }
+} // end header
+
+/* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
+
+nav {
+  background-color: $primaryColor;
+}
+
+#myButton::before {
+  content: "\2630";
+}
+
+#myButton {
+  border: none;
+  font-size: 2rem;
+  background: none;
+  color: white;
+  display: block;
+  text-align: left;
+  padding: 0.25rem $gutter;
+  cursor: pointer;
+  width: 100%;
+  height: 44px;
+  border-bottom: 1px solid;
+  border-image: linear-gradient(to right, transparent, $greyColor, transparent)
+    1;
+}
+
+/* Hide the menu by default */
+ul.menuLinks {
+  margin: 0;
+  padding: 0;
+  display: none;
+  li {
+    text-align: center;
+    list-style-type: none;
+    border-bottom: 1px solid;
+    border-image: linear-gradient(
+        to right,
+        transparent,
+        $greyColor,
+        transparent
+      )
+      1;
+    a {
+      display: block;
+      padding: 0.75rem $gutter;
+      color: white;
+      text-decoration: none;
+    }
+  }
+
+  li:last-child {
+    border-bottom: none;
+  }
+}
+
+nav ul li.active {
+  background-color: $accentColor;
+  a {
+    color: #fff;
+  }
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+/* Show the menu when the "open" class is added */
+ul.menuLinks.open {
+  display: block;
+}
+
+#myButton.open::before {
+  content: "\2715"; /* Unicode for "X" */
+}
+
+/* --------------------------- MAIN --------------------------- */
+
+#mainWrapper {
+  width: 100%;
+  background: linear-gradient(180deg, #f4f8f6 0%, #ffffff 22rem);
+}
+
+.cards-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem $gutter;
+}
+
+.card {
+  margin: 0;
+  background-color: #fff;
+  border-radius: 14px;
+  border: 1px solid rgba($primaryColor, 0.14);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease,
+    border-color 0.25s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
+    border-color: rgba($primaryColor, 0.28);
+  }
+
+  img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+  }
+
+  img:first-child {
+    border-radius: 14px 14px 0 0;
+  }
+
+  img:last-child {
+    border-radius: 0 0 14px 14px;
+  }
+
+  h2 {
+    margin: 0;
+    padding: 0.85rem 1rem 0.45rem 1rem;
+    color: $primaryColor;
+    font-size: 1.2rem;
+    font-weight: $normalWeight;
+    letter-spacing: 0.2px;
+  }
+
+  h2.middle {
+    text-align: center;
+    background-color: $primaryColor;
+    color: white;
+    padding: 0.85rem;
+  }
+
+  .card-content {
+    padding: 0.25rem 1rem 1rem 1rem;
+
+    p {
+      color: #333;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 0.9rem;
+      padding: 0.55rem 1rem;
+      background-color: $secondaryColor;
+      color: white;
+      text-decoration: none;
+      border-radius: 999px;
+      font-weight: $normalWeight;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+
+      &:hover {
+        background-color: #00295d;
+        transform: translateY(-1px);
+      }
+    }
+  }
+}
+
+main {
+  h1 {
+    padding: 1rem $gutter 0.5rem $gutter;
+    font-size: 1.5rem;
+    color: $secondaryColor;
+    font-weight: $lightWeight;
+  }
+  p {
+    padding: 0.5rem 0;
+    color: #333;
+    line-height: $leading;
+  }
+
+  div.page-body-text {
+    p{
+        padding: 0.5rem $gutter;
+    }
+  }
+  
+} // end main
+
+/* --------------------------- FOOTER --------------------------- */
+#footerWrapper {
+  background: linear-gradient(135deg, $primaryColor 0%, $accentColor 100%);
+} // end footer wrapper
+
+footer {
+  font-size: 1rem;
+  padding: 1.25rem $gutter;
+  color: white;
+  line-height: $leading;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.9rem;
+
+  section {
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 12px;
+    padding: 0.85rem;
+  }
+
+  .contact-info p {
+    margin: 0 0 0.45rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+  }
+
+  .contact-info p:last-child {
+    margin-bottom: 0;
+  }
+
+  ion-icon {
+    font-size: 1.15rem;
+    color: #ffffff;
+    flex-shrink: 0;
+  }
+
+  a {
+    color: #eaf5ff;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  a:hover {
+    color: white;
+    text-decoration: underline;
+  }
+
+  .social-media {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    justify-content: center;
+  }
+
+  .social-media a {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(1, 55, 125, 0.55);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+
+  .social-media a:hover {
+    background-color: rgba(1, 55, 125, 0.85);
+    transform: translateY(-2px);
+    text-decoration: none;
+  }
+
+  .address {
+    text-align: center;
+  }
+
+  .address address {
+    font-style: normal;
+  }
+
+  .copyright {
+    text-align: center;
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.9);
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    background: transparent;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    border-radius: 0;
+    padding: 0.7rem 0 0;
+  }
+
+
+  
+} // end footer
