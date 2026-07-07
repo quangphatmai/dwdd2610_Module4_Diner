@@ -509,6 +509,76 @@ main p {
 main div.page-body-text p {
   padding: 0.5rem 10px;
 }
+main .specials-section {
+  margin: 1.25rem 10px 2rem;
+  padding: 1.25rem;
+  background: #ffffff;
+  border: 1px solid rgba(31, 127, 85, 0.16);
+  border-radius: 14px;
+  box-shadow: 0 12px 28px rgba(13, 49, 58, 0.1);
+}
+main .specials-copy .eyebrow {
+  margin: 0 0 0.25rem;
+  padding: 0;
+  color: #1f7f55;
+  font-size: 0.78rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08rem;
+}
+main .specials-copy h2 {
+  margin: 0;
+  color: #01377d;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+main .specials-copy p {
+  margin: 0.65rem 0 0;
+  padding: 0;
+  line-height: 1.65;
+}
+main .specials-copy .btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.65rem 1.1rem;
+  background-color: #01377d;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 999px;
+  font-weight: 500;
+  transition: background-color 0.25s ease, transform 0.2s ease;
+}
+main .specials-copy .btn:hover {
+  background-color: #00295d;
+  transform: translateY(-1px);
+}
+main .specials-details {
+  display: grid;
+  gap: 0.85rem;
+  margin-top: 1.25rem;
+}
+main .specials-details article {
+  padding: 1rem;
+  background: #f4f8f6;
+  border-left: 4px solid #1f7f55;
+  border-radius: 10px;
+}
+main .specials-details ion-icon {
+  color: #1f7f55;
+  font-size: 1.45rem;
+}
+main .specials-details h3 {
+  margin: 0.35rem 0 0;
+  color: #0d313a;
+  font-size: 1rem;
+  font-weight: 500;
+}
+main .specials-details p {
+  margin: 0.2rem 0 0;
+  padding: 0;
+  color: #333333;
+  line-height: 1.45;
+}
 
 /* --------------------------- FOOTER --------------------------- */
 #footerWrapper {
@@ -600,6 +670,9 @@ footer .copyright {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1.15rem;
   }
+  main .specials-details {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
   footer {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
@@ -646,6 +719,16 @@ footer .copyright {
   }
   .card img:last-child {
     margin-top: auto;
+  }
+  main .specials-section {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.35fr);
+    gap: 1.5rem;
+    align-items: center;
+    padding: 1.5rem;
+  }
+  main .specials-details {
+    margin-top: 0;
   }
   footer {
     grid-template-rows: minmax(86px, auto) minmax(86px, auto) auto;

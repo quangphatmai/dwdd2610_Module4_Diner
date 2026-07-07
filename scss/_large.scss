@@ -43,6 +43,18 @@ ul.menuLinks li a {
     margin-top: auto;
 }
 
+main .specials-section {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.35fr);
+    gap: 1.5rem;
+    align-items: center;
+    padding: 1.5rem;
+}
+
+main .specials-details {
+    margin-top: 0;
+}
+
 footer {
     grid-template-rows: minmax(86px, auto) minmax(86px, auto) auto;
     align-items: stretch;
@@ -89,4 +101,3 @@ footer {
         grid-row: 3 / 4;
     }
 }
-
