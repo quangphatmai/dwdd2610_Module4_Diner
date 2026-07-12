@@ -2,23 +2,24 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Noodle House Diner</title>
+    <title>Noodle House Diner | Fresh Noodle Bowls in Provo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Noodle House Diner serves fresh noodle bowls, daily specials, and comforting classics in Provo, Utah."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       type="text/css"
       media="screen"
       href="css/styles.min.css"
     />
-
-    <!-- Google Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
@@ -26,12 +27,14 @@
   </head>
 
   <body>
+    <a class="skip-link" href="#mainContent">Skip to main content</a>
+
     <div id="headerWrapper">
-      <header>
-        <a href="index.html">
+      <header class="site-header">
+        <a class="brand" href="index.html" aria-label="Noodle House Diner home">
           <img
             src="images/diner-logo-1x.webp"
-            alt="Noodle House Diner logo"
+            alt=""
             width="60"
             height="60"
             srcset="
@@ -40,152 +43,178 @@
               images/diner-logo-3x.webp 3x
             "
           />
+          <span>Noodle House Diner</span>
         </a>
-        <span>Noodle House Diner</span>
+        <p class="header-meta">Open daily in Provo, Utah</p>
       </header>
     </div>
-    <!-- end header wrapper -->
 
     <div id="navWrapper">
-      <nav>
-        <button id="myButton" title="Menu Toggle"></button>
-        <ul class="menuLinks">
-          <li><a href="#">Clients</a></li>
-          <li><a href="#">Services</a></li>
-          <li class="active"><a href="#">Best Practices</a></li>
-          <li><a href="#">Our Team</a></li>
-          <li><a href="#">Contact</a></li>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <button
+          id="myButton"
+          type="button"
+          aria-label="Open menu"
+          aria-controls="primaryMenu"
+          aria-expanded="false"
+        ></button>
+        <ul id="primaryMenu" class="menuLinks">
+          <li class="active"><a href="#menu">Menu</a></li>
+          <li><a href="#specials">Specials</a></li>
+          <li><a href="#story">Our Story</a></li>
+          <li><a href="#visit">Visit</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </div>
-    <!-- end nav wrapper -->
 
     <div id="mainWrapper">
-      <main>
-        <div class="cards-container">
-          <section class="card">
-            <img src="./images/padthai.webp" alt="Pad Thai" />
-            <h2 class="card-title">Pad Thai</h2>
-            <div class="card-content">
-              <p>
-                Stir-fried rice noodles with shrimp, tofu, peanuts, and a tangy
-                tamarind sauce.
-              </p>
-              <a class="btn" href="#">Learn More</a>
+      <main id="mainContent">
+        <section class="hero" aria-labelledby="heroTitle">
+          <div class="hero-copy">
+            <p class="eyebrow">Fresh noodles, fast comfort</p>
+            <h1 id="heroTitle">Noodle House Diner</h1>
+            <p>
+              Bowls built with bright herbs, balanced broths, and satisfying
+              noodles from favorite traditions around the world.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#menu">View menu</a>
+              <a class="btn btn-secondary" href="tel:+18015552847"
+                >Call ahead</a
+              >
             </div>
-          </section>
+          </div>
+        </section>
 
-          <section class="card">
-            <h2 class="card-title middle">Ramen</h2>
-            <img src="./images/ramen.webp" alt="Ramen" />
-            <div class="card-content">
-              <p>
-                Japanese wheat noodles served in a rich savory broth with sliced
-                pork, soft-boiled egg, and fresh green onions.
-              </p>
-              <a class="btn" href="#">Learn More</a>
-            </div>
-          </section>
+        <section class="intro-section" id="story" aria-labelledby="storyTitle">
+          <div>
+            <p class="eyebrow">Neighborhood kitchen</p>
+            <h2 id="storyTitle">Made for quick lunches and relaxed dinners</h2>
+          </div>
+          <div class="page-body-text">
+            <p>
+              At Noodle House Diner, every bowl starts with fresh ingredients,
+              steady prep, and noodles cooked with care. The menu brings
+              together familiar favorites while keeping the experience relaxed,
+              welcoming, and easy to enjoy.
+            </p>
+            <p>
+              Our best practices are simple: keep the kitchen clean, serve food
+              hot, listen to guests, and make every visit feel worth coming back
+              for.
+            </p>
+          </div>
+        </section>
 
-          <section class="card">
-            <h2 class="card-title">Pho</h2>
-            <div class="card-content">
-              <p>
-                Traditional Vietnamese rice noodle soup with slow-simmered beef
-                broth, tender beef slices, fresh herbs, and lime.
-              </p>
-              <a class="btn" href="#">Learn More</a>
-            </div>
-            <img src="./images/pho.webp" alt="Pho" />
-          </section>
+        <section class="menu-section" id="menu" aria-labelledby="menuTitle">
+          <div class="section-heading">
+            <p class="eyebrow">Guest favorites</p>
+            <h2 id="menuTitle">Signature noodle bowls</h2>
+          </div>
 
-          <section class="card">
-            <img src="./images/spaghetti.webp" alt="Spaghetti" />
-            <h2 class="card-title">Spaghetti</h2>
-            <div class="card-content">
-              <p>
-                Classic Italian pasta with a rich tomato-based sauce and fresh
-                basil.
-              </p>
-              <a class="btn" href="#">Learn More</a>
-            </div>
-          </section>
+          <div class="cards-container">
+            <article class="card">
+              <img src="images/padthai.webp" alt="Pad Thai with shrimp and peanuts" />
+              <div class="card-content">
+                <h3>Pad Thai</h3>
+                <p>
+                  Stir-fried rice noodles with shrimp, tofu, peanuts, and tangy
+                  tamarind sauce.
+                </p>
+                <span>$12.95</span>
+              </div>
+            </article>
 
-          <section class="card">
-            <h2 class="card-title middle">Chow Mein</h2>
-            <img src="./images/chowmein.webp" alt="Chow Mein" />
-            <div class="card-content">
-              <p>
-                Stir-fried noodles with vegetables and your choice of protein in
-                a savory sauce.
-              </p>
-              <a class="btn" href="#">Learn More</a>
-            </div>
-          </section>
+            <article class="card">
+              <img src="images/ramen.webp" alt="Ramen with pork and soft-boiled egg" />
+              <div class="card-content">
+                <h3>Ramen</h3>
+                <p>
+                  Wheat noodles in rich savory broth with sliced pork,
+                  soft-boiled egg, and green onions.
+                </p>
+                <span>$13.95</span>
+              </div>
+            </article>
 
-          <section class="card">
-            <h2 class="card-title">Udon</h2>
-            <div class="card-content">
-              <p>
-                Thick Japanese wheat noodles in a mild, savory broth with
-                vegetables and your choice of protein.
-              </p>
-              <a class="btn" href="#">Learn More</a>
-            </div>
-            <img src="./images/udon.webp" alt="Udon" />
-          </section>
-        </div>
-        <h1>Best Practices</h1>
+            <article class="card">
+              <img src="images/pho.webp" alt="Pho with beef, herbs, and lime" />
+              <div class="card-content">
+                <h3>Pho</h3>
+                <p>
+                  Vietnamese rice noodle soup with slow-simmered beef broth,
+                  tender beef, fresh herbs, and lime.
+                </p>
+                <span>$13.50</span>
+              </div>
+            </article>
 
-        <div class="page-body-text">
-          <p>
-            At Noodle House Diner, every bowl is built around fresh ingredients,
-            balanced broths, and noodles prepared with care. Our menu brings
-            together familiar favorites from several noodle traditions while
-            keeping the experience relaxed, welcoming, and easy to enjoy.
-          </p>
+            <article class="card">
+              <img src="images/spaghetti.webp" alt="Spaghetti with tomato sauce and basil" />
+              <div class="card-content">
+                <h3>Spaghetti</h3>
+                <p>
+                  Classic Italian pasta with a rich tomato-based sauce and
+                  fresh basil.
+                </p>
+                <span>$11.95</span>
+              </div>
+            </article>
 
-          <p>
-            We focus on generous portions, consistent flavor, and quick service
-            for guests who want a dependable meal without losing the comfort of a
-            neighborhood diner. Whether you are stopping in for lunch or settling
-            down for dinner, each dish is made to feel satisfying and memorable.
-          </p>
+            <article class="card">
+              <img src="images/chowmein.webp" alt="Chow Mein with vegetables" />
+              <div class="card-content">
+                <h3>Chow Mein</h3>
+                <p>
+                  Stir-fried noodles with crisp vegetables and your choice of
+                  protein in a savory sauce.
+                </p>
+                <span>$12.50</span>
+              </div>
+            </article>
 
-          <p>
-            Our best practices are simple: keep the kitchen clean, serve food
-            hot, listen to guests, and make every visit feel worth coming back
-            for.
-          </p>
-        </div>
+            <article class="card">
+              <img src="images/udon.webp" alt="Udon noodles in savory broth" />
+              <div class="card-content">
+                <h3>Udon</h3>
+                <p>
+                  Thick Japanese wheat noodles in a mild broth with vegetables
+                  and your choice of protein.
+                </p>
+                <span>$12.95</span>
+              </div>
+            </article>
+          </div>
+        </section>
 
-        <section class="specials-section">
+        <section class="specials-section" id="specials" aria-labelledby="specialsTitle">
           <div class="specials-copy">
             <p class="eyebrow">Fresh every day</p>
-            <h2>Hours & Specials</h2>
+            <h2 id="specialsTitle">Hours & Specials</h2>
             <p>
               Stop by for daily-made noodles, lunch combinations, and rotating
               dinner bowls inspired by classic noodle dishes from around the
               world.
             </p>
-            <a class="btn" href="#">View Today's Menu</a>
+            <a class="btn btn-primary" href="#visit">Plan your visit</a>
           </div>
 
           <div class="specials-details">
             <article>
-              <ion-icon name="time-outline"></ion-icon>
+              <span aria-hidden="true">11-9</span>
               <h3>Open Daily</h3>
               <p>11 a.m. - 9 p.m.</p>
             </article>
 
             <article>
-              <ion-icon name="restaurant-outline"></ion-icon>
+              <span aria-hidden="true">Lunch</span>
               <h3>Lunch Special</h3>
               <p>11 a.m. - 2 p.m.</p>
             </article>
 
             <article>
-              <ion-icon name="sparkles-outline"></ion-icon>
+              <span aria-hidden="true">Chef</span>
               <h3>Dinner Feature</h3>
               <p>Chef's bowl changes weekly.</p>
             </article>
@@ -193,75 +222,39 @@
         </section>
       </main>
     </div>
-    <!-- end main wrapper -->
 
     <div id="footerWrapper">
-      <footer>
-        <section class="contact-info">
-          <p><ion-icon name="person-outline"></ion-icon> Phat Mai</p>
-          <p><ion-icon name="home-outline"></ion-icon> Noodle House Diner</p>
+      <footer id="contact">
+        <section class="contact-info" aria-labelledby="contactTitle">
+          <h2 id="contactTitle">Contact</h2>
+          <p>Phat Mai</p>
+          <p>Noodle House Diner</p>
           <p>
-            <ion-icon name="mail-unread-outline"></ion-icon
-            ><a href="mailto:info@noodlehousediner.com">
+            <a href="mailto:info@noodlehousediner.com">
               info@noodlehousediner.com</a
             >
           </p>
-          <p>
-            <ion-icon name="globe-outline"></ion-icon
-            ><a
-              href="https://www.noodlehousediner.com"
-              target="_blank"
-              rel="noopener"
-            >
-              www.noodlehousediner.com</a
-            >
-          </p>
-          <p>
-            <ion-icon name="call-outline"></ion-icon
-            ><a href="tel:+18015552847"> (801) 555-2847</a>
-          </p>
+          <p><a href="tel:+18015552847">(801) 555-2847</a></p>
         </section>
 
-        <section class="social-media">
-          <a href="#" title="Facebook" rel="noopener">
-            <ion-icon name="logo-facebook"></ion-icon>
-          </a>
-
-          <a href="#" title="Instagram" rel="noopener">
-            <ion-icon name="logo-instagram"></ion-icon>
-          </a>
-
-          <a href="#" title="Twitter" rel="noopener">
-            <ion-icon name="logo-twitter"></ion-icon>
-          </a>
-
-          <a href="#" title="YouTube" rel="noopener">
-            <ion-icon name="logo-youtube"></ion-icon>
-          </a>
-
-          <a href="#" title="TikTok" rel="noopener">
-            <ion-icon name="logo-tiktok"></ion-icon>
-          </a>
+        <section class="visit-info" id="visit" aria-labelledby="visitTitle">
+          <h2 id="visitTitle">Visit</h2>
+          <address>123 Noodle Street<br />Provo, UT 84601</address>
+          <p>Open daily from 11 a.m. to 9 p.m.</p>
         </section>
 
-        <section class="address">
-          <address>123 Noodle Street Provo, UT 84601 United States</address>
+        <section class="social-media" aria-label="Social media links">
+          <a href="#" rel="noopener">Facebook</a>
+          <a href="#" rel="noopener">Instagram</a>
+          <a href="#" rel="noopener">YouTube</a>
         </section>
 
         <section class="copyright">
-          <p>&copy; 2026 &bull; Phat Mai. All rights reserved.</p>
+          <p>&copy; 2026 Phat Mai. All rights reserved.</p>
         </section>
       </footer>
     </div>
-    <!-- end footer wrapper -->
-    <script src="js/script.js" type="module"></script>
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
+
+    <script src="js/script.js"></script>
   </body>
 </html>
